@@ -3,7 +3,7 @@ import { Variants } from "framer-motion"
 export const containerLoaderVariant = {
     show: {
         transition: {
-            staggerChildren: 0.6,
+            staggerChildren: 0.35,
         }
     }
 } as Variants
@@ -18,7 +18,7 @@ export const imageLoaderVariant = {
         y: 0,
         transition: {
             ease: 'backIn',
-            duration: 0.5,
+            duration: 1.8,
         }
     },
     exit: {
