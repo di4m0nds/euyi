@@ -11,7 +11,11 @@ function ImageBlock({ className, name, width, variants, type }: PropsImageCompon
         >
             <picture>
                 <source srcSet={BASE_URL + name + ".webp"} type={type} />
-                <img src={BASE_URL + name + ".webp"} alt={name} width={width} />
+                <motion.img
+                    src={BASE_URL + name + ".webp"}
+                    alt={name}
+                    width={width}
+                />
             </picture>
         </motion.div>
     )

@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { AnimatePresence } from "framer-motion"
 
-import { Header, Loader } from "./components"
+import { Header, Loader, About } from "./components"
 
 function App() {
     const [ loading, setLoading ] = useState<boolean>(true)
@@ -14,7 +14,7 @@ function App() {
            : (
                <div className="w-screen">
                    <Header />
-                   {/* ABOUT */}
+                   <About />
                    {/* PROJECTS/WORKS */}
                    {/* CONTACTING */}
                </div>

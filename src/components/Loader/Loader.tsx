@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
 import { PropsLoaderComponent } from "../../utils/interfaces";
-import { containerLoaderVariant, imageLoaderVariant } from "../../utils/variants";
+import { containerLoaderVariant, imageLoaderVariant, mainImageLoaderVariant } from "../../utils/variants";
 
 import ImageBlock from "../ImageBlock/ImageBlock";
+import { BASE_URL } from "../../utils/consts";
 
 function Loader({ setLoading }: PropsLoaderComponent) {
     return (
@@ -14,8 +15,17 @@ function Loader({ setLoading }: PropsLoaderComponent) {
             animate="show"
             exit="exit"
         >
-            <div  className="w-full h-full flex justify-center items-center">
-                <ImageBlock variants={imageLoaderVariant} name="euge" width={500} className="" type="image/webp" />
+            <div className="w-full h-full flex justify-center items-center">
+                <ImageBlock variants={imageLoaderVariant} name="euge" width={400} className="" type="image/webp" />
+            </div>
+            <div className="w-full h-full flex justify-center items-center absolute top-[0px]">
+                <motion.img
+                    variants={mainImageLoaderVariant}
+                    src={BASE_URL + "euge.webp"}
+                    alt="main-euge"
+                    width={400}
+                    layoutId="main-image-1"
+                />
             </div>
             <ImageBlock
                 variants={imageLoaderVariant} name="show_1" width={400}

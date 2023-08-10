@@ -27,12 +27,13 @@ body {
   padding: 0;
 
   box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
 .font-family-poppins {
-    font-family: "Poppins"
+    font-family: "Poppins, sans-serif, Arial, system-ui, Avenir, Helvetica"
 }
 
 .font-family-quicksand {
-    font-family: "Quicksand"
+    font-family: "Quicksand, sans-serif, Arial, system-ui, Avenir, Helvetica"
 }
