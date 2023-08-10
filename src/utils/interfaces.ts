@@ -15,4 +15,3 @@ export interface PropsImageComponent {
     width: number
     variants: Variants | null
 }
-

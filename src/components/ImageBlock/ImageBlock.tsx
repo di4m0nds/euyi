@@ -1,10 +1,10 @@
 import { motion } from "framer-motion"
 
-import { loadImages } from "../../utils/images"
 import { PropsImageComponent } from "../../utils/interfaces"
+import { BASE_URL } from "../../utils/consts"
 
 function ImageBlock({ className, name, width, variants }: PropsImageComponent) {
-    const image = loadImages[name]
+    const type = "image/webp"
 
     return variants != null
     ? (
@@ -12,10 +12,16 @@ function ImageBlock({ className, name, width, variants }: PropsImageComponent) {
             variants={variants}
             className={className ? className : ""}
         >
-            <img src={image} alt={name} width={width} />
+            <picture>
+                <source srcSet={BASE_URL + name + ".webp"} type={type} />
+                <img src={BASE_URL + name + ".webp"} alt={name} width={width} />
+            </picture>
         </motion.div>
     ) : (
-        <img src={image} alt={name} width={width} className={className ? className : ""} />
+        <picture>
+            <source srcSet={BASE_URL + name + ".webp"} type={type} />
+            <img src={BASE_URL + name + ".webp"} alt={name} width={width} />
+        </picture>
     )
 }
 
