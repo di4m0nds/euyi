@@ -15,30 +15,27 @@ function Loader({ setLoading }: PropsLoaderComponent) {
             animate="show"
             exit="exit"
         >
-            <div className="w-full h-full flex justify-center items-center">
-                <ImageBlock variants={imageLoaderVariant} name="euge" width={400} className="" type="image/webp" />
-            </div>
+            <ImageBlock
+                variants={imageLoaderVariant} name="food_1" width={500}
+                className="absolute top-[5rem] right-[6rem]" type="image/webp" />
+            <ImageBlock
+                variants={imageLoaderVariant} name="shoot_1" width={300}
+                className="absolute bottom-[6rem] left-[5rem]" type="image/webp" />
+            <ImageBlock
+                variants={imageLoaderVariant} name="marriage" width={500}
+                className="absolute bottom-[5rem] right-[6rem]" type="image/webp" />
+            <ImageBlock
+                variants={imageLoaderVariant} name="show_1" width={400}
+                className="absolute top-[6rem] left-[5rem]" type="image/webp" />
             <div className="w-full h-full flex justify-center items-center absolute top-[0px]">
                 <motion.img
                     variants={mainImageLoaderVariant}
-                    src={BASE_URL + "euge.webp"}
+                    src={BASE_URL + "euge2.webp"}
                     alt="main-euge"
                     width={400}
                     layoutId="main-image-1"
                 />
             </div>
-            <ImageBlock
-                variants={imageLoaderVariant} name="show_1" width={400}
-                className="absolute top-[5rem] left-[5rem]" type="image/webp" />
-            <ImageBlock
-                variants={imageLoaderVariant} name="food_1" width={500}
-                className="absolute top-[5rem] right-[5rem]" type="image/webp" />
-            <ImageBlock
-                variants={imageLoaderVariant} name="shoot_1" width={300}
-                className="absolute bottom-[5rem] left-[5rem]" type="image/webp" />
-            <ImageBlock
-                variants={imageLoaderVariant} name="marriage" width={500}
-                className="absolute bottom-[5rem] right-[5rem]" type="image/webp" />
         </motion.div>
     )
 }

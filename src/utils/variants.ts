@@ -32,13 +32,16 @@ export const imageLoaderVariant = {
 } as Variants
 
 export const mainImageLoaderVariant = {
-  hidden: { opacity: 0, y: 200 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: 'backIn',
-      duration: 0.5,
+    hidden: {
+        opacity: 0,
+        y: 50,
     },
-  },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            ease: 'backIn',
+            duration: 1.8,
+        }
+    },
 } as Variants
