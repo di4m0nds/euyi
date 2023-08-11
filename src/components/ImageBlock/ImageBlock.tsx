@@ -15,6 +15,7 @@ function ImageBlock({ className, name, width, variants, type }: PropsImageCompon
                     src={BASE_URL + name + ".webp"}
                     alt={name}
                     width={width}
+                    className="rounded"
                 />
             </picture>
         </motion.div>

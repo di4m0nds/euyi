@@ -23,10 +23,10 @@ function Loader({ setLoading }: PropsLoaderComponent) {
                 className="absolute bottom-[6rem] left-[5rem]" type="image/webp" />
             <ImageBlock
                 variants={imageLoaderVariant} name="marriage" width={500}
-                className="absolute bottom-[5rem] right-[6rem]" type="image/webp" />
+                className="absolute bottom-[5rem] right-[20%]" type="image/webp" />
             <ImageBlock
-                variants={imageLoaderVariant} name="show_1" width={400}
-                className="absolute top-[6rem] left-[5rem]" type="image/webp" />
+                variants={imageLoaderVariant} name="show_1" width={window.screen.width > 800 ? 600 : 400}
+                className="absolute top-[6rem] left-[20%]" type="image/webp" />
             <div className="w-full h-full flex justify-center items-center absolute top-[0px]">
                 <motion.img
                     variants={mainImageLoaderVariant}

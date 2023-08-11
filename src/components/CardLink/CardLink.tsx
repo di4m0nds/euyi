@@ -2,8 +2,8 @@ import { motion } from "framer-motion"
 function CardLink({ title, description, endpoint }: { title: string, description: string, endpoint: string }) {
     return (
         <a href={`#${endpoint}`}>
-            <div className="max-w rounded-3xl p-px bg-gradient-to-b from-green-300 to-orange-300 dark:from-red-800 dark:to-yellow-800">
-                <div className="rounded-[calc(1.5rem-1px)] p-10 bg-zinc-900">
+            <div className="max-w rounded-3xl p-px bg-gradient-to-b from-green-300 to-orange-300 dark:from-red-800 dark:to-yellow-800 hover:shadow-2xl hover:shadow-orange-200/20 duration-700">
+                <div className="rounded-[calc(1.5rem-1px)] p-10 bg-zinc-900 hover:bg-zinc-950 duration-75">
                     <h3 className="text-xl font-semibold mb-2">{title}</h3>
                     <p className="text-gray-300">{description}</p>
 

@@ -7,7 +7,7 @@ function Projects() {
             className="py-16" id="trabajos"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
         >
             <h2 className="mt-10 text-4xl font-semibold text-center mb-14">Portafolio de Proyectos</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

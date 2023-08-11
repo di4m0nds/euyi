@@ -26,7 +26,7 @@ export const imageLoaderVariant = {
         y: -50,
         transition: {
             ease: 'backOut',
-            duration: 0.5,
+            duration: 0.8,
         }
     }
 } as Variants
