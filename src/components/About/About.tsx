@@ -9,7 +9,7 @@ function About() {
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center">
                 <motion.img
                     className="md:mt-[40px]"
-                    src={`${BASE_URL}euge2.webp`}
+                    src={`${BASE_URL}euge.webp`}
                     layoutId="main-image-1"
                     width={size > 1225 ? 400 : 300}
                     transition={{
@@ -28,7 +28,7 @@ function About() {
                     >
                         ¡Hola! Soy Eugenia
                     </motion.h1>
-                    <motion.p
+                    {/* <motion.p
                         initial={{ opacity: 0, y: -50, scale: 0.4 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ ease: 'easeInOut', duration: 1 }}
@@ -41,7 +41,7 @@ function About() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ ease: 'easeInOut', duration: 1.2 }}
                         className="w-[70%] h-[3px] bg-zinc-300/70 rounded my-5"
-                    />
+                    /> */}
                     <motion.p
                         initial={{ opacity: 0, y: 100, scale: 0.8 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}

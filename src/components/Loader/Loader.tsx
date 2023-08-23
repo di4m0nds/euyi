@@ -30,7 +30,7 @@ function Loader({ setLoading }: PropsLoaderComponent) {
             <div className="w-full h-full flex justify-center items-center absolute top-[0px]">
                 <motion.img
                     variants={mainImageLoaderVariant}
-                    src={BASE_URL + "euge2.webp"}
+                    src={BASE_URL + "euge.webp"}
                     alt="main-euge"
                     width={400}
                     layoutId="main-image-1"

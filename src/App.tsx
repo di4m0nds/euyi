@@ -2,8 +2,11 @@ import { useState } from "react"
 
 import { AnimatePresence } from "framer-motion"
 
-import { Header, Loader, About, Projects, Experience, Testimonials } from "./components"
+import { Loader } from "./components"
 import { Route, Routes, useLocation } from "react-router-dom"
+import NotFound from "./pages/NotFound/NotFound"
+import Album from "./pages/Album/Album"
+import Home from "./pages/Home/Home"
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true)
@@ -16,19 +19,11 @@ function App() {
                 <Route path="/" element={
                     loading
                         ? <Loader setLoading={setLoading} />
-                        : (
-                            <div className="w-screen">
-                                <Header />
-                                <main className="px-10 md:px-[15%]">
-                                    <About />
-                                    <Projects />
-                                    <Experience />
-                                    <Testimonials />
-                                </main>
-                            </div>
-                        )}
-                />
-                {/* <Route path="*" element={<NotFound />} /> */}
+                        : <Home />
+                } />
+                <Route path="/non-animation" element={<Home />} />
+                <Route path="/album/:id" element={<Album />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
 
         </AnimatePresence>
