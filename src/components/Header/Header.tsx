@@ -15,8 +15,12 @@ function Header({ activeNavbar } : Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
         >
-            <Link to="/">
-                <h1 className="text-[2.3rem] font-bold">EUGE FOTO{window.screen.width > 375 ? 'GRAFIA' : ''}</h1>
+            <Link to="/non-animation">
+                {/* <h1 className="text-[2.3rem] font-bold">EUGE FOTO{window.screen.width > 375 ? 'GRAFIA' : ''}</h1> */}
+                <h1 className="text-[2.3rem] font-bold">
+                    EUGENIA SILVESTRI
+                </h1>
+                <span className="absolute top-16">FOTOGRAFIA</span>
             </Link>
             {activeNavbar
                 ? <Navbar />

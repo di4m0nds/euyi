@@ -14,9 +14,8 @@ import Experience from "./Experience/Experience"
 // Testimonials
 import Testimonials from "./Testimonials/Testimonials"
 
-// Contect
-
 // Footer
+import Footer from "./Footer/Footer"
 
 export {
     Header,
@@ -25,4 +24,5 @@ export {
     Projects,
     Experience,
     Testimonials,
+    Footer,
 }

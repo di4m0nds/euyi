@@ -12,7 +12,7 @@ function Projects() {
         >
             <h2 className="mt-10 text-4xl font-semibold text-center mb-14">Portafolio de Proyectos</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                {projects.map((work) => <CardLink endpoint={work.endpoint} title={work.title} description={work.description} />)}
+                {projects.map((work, index) => <CardLink key={index} endpoint={work.endpoint} title={work.title} description={work.description} images={work.images} />)}
             </div>
         </motion.section>
     )
