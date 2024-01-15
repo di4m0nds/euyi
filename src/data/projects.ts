@@ -3,7 +3,7 @@ export const projects = [
     endpoint: "bodas",
     title:"Fotografía de Bodas",
     description:"Capturando la esencia emocional y los momentos inolvidables de tu día especial con un enfoque artístico y atemporal.",
-    images: ['bodas_1']
+    images: ['bodas_1', 'bodas_2', 'bodas_3', 'bodas_4', 'bodas_5', 'bodas_6', 'bodas_7']
   },
 
   {
@@ -17,7 +17,11 @@ export const projects = [
     endpoint: "conciertos",
     title:"Fotografía de Conciertos",
     description:"Capturando la intensidad y la energía de las actuaciones en vivo, con imágenes que resaltan el alma de la música y los artistas.",
-    images: ['conciertos_2', 'conciertos_1', 'conciertos_3', 'conciertos_4', 'conciertos_5', ]
+    images: [
+      'conciertos_2', 'conciertos_1', 'conciertos_3', 'conciertos_4', 'conciertos_5',
+      'conciertos_6', 'conciertos_7', 'conciertos_8', 'conciertos_9', 'conciertos_10',
+      'conciertos_11', 'conciertos_12', 'conciertos_13'
+    ]
   },
 
   {
