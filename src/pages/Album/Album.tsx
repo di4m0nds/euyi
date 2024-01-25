@@ -33,10 +33,8 @@ function Album() {
         transition={{ duration: 0.5 }}
         className="px-10 md:px-[15%] mb-20"
       >
-        <div className="px-4">
-          <h1 className="text-3xl font-semibold mb-4 mt-10 text-orange-200">{project.title}</h1>
-          <p className="text-lg mb-10">{project.description}</p>
-        </div>
+        <h1 className="text-3xl font-semibold mb-4 mt-10 text-orange-200">{project.title}</h1>
+        <p className="text-lg mb-10">{project.description}</p>
 
         <Masonry
           breakpointCols={breakpointColumns}

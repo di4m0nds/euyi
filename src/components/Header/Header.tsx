@@ -10,7 +10,7 @@ interface Props {
 function Header({ activeNavbar } : Props) {
     return (
         <motion.header
-            className="w-full h-[100px] relative flex flex-col md:flex-row md:justify-evenly justify-center items-center mt-[20px] md:px-0 px-5"
+            className="w-full h-[100px] relative flex flex-col md:flex-row md:justify-between justify-center items-center mt-[20px] px-10 md:px-[15%]"
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
