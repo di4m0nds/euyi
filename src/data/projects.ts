@@ -3,14 +3,16 @@ export const projects = [
     endpoint: "bodas",
     title:"Fotografía de Bodas",
     description:"Capturando la esencia emocional y los momentos inolvidables de tu día especial con un enfoque artístico y atemporal.",
-    images: ['bodas_1', 'bodas_2', 'bodas_3', 'bodas_4', 'bodas_5', 'bodas_6', 'bodas_7']
+    images: ['bodas_1', 'bodas_2', 'bodas_3', 'bodas_4', 'bodas_5', 'bodas_6', 'bodas_7'],
+    previewImages: ['bodas_1', 'bodas_2', 'bodas_3', 'bodas_4']
   },
 
   {
     endpoint: "bautismo",
     title:"Bautismos y Ceremonias",
     description:"Capturando la solemnidad y alegría de los momentos sagrados mientras celebramos el bautismo de tus pequeños seres queridos.",
-    images: ['bautismo_1', 'bautismo_2', 'bautismo_3', 'bautismo_4', 'bautismo_5']
+    images: ['bautismo_1', 'bautismo_2', 'bautismo_3', 'bautismo_4', 'bautismo_5'],
+    previewImages: ['bautismo_1', 'bautismo_2', 'bautismo_3', 'bautismo_4'],
   },
 
   {
@@ -21,7 +23,8 @@ export const projects = [
       'conciertos_2', 'conciertos_1', 'conciertos_3', 'conciertos_4', 'conciertos_5',
       'conciertos_6', 'conciertos_7', 'conciertos_8', 'conciertos_9', 'conciertos_10',
       'conciertos_11', 'conciertos_12', 'conciertos_13'
-    ]
+    ],
+    previewImages: ['conciertos_2', 'conciertos_1', 'conciertos_3', 'conciertos_4']
   },
 
   {
@@ -40,7 +43,8 @@ export const projects = [
       'productos_9',
       'productos_10',
       'productos_11'
-    ]
+    ],
+    previewImages: ['productos_1', 'productos_2','productos_3','productos_4']
   },
 
   {
@@ -59,7 +63,8 @@ export const projects = [
       'retratos_9',
       'retratos_10',
       'retratos_11'
-    ]
+    ],
+    previewImages: ['retratos_1','retratos_2', 'retratos_3','retratos_4']
   },
 
   {
@@ -75,6 +80,7 @@ export const projects = [
       'familiares_6',
       'familiares_7',
       'familiares_8',
-    ]
+    ],
+    previewImages: ['familiares_1','familiares_2','familiares_3','familiares_4']
   }
 ];

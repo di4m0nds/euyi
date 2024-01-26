@@ -6,30 +6,28 @@ interface CardLinkProps {
   description: string;
   endpoint: string;
   images: string[];
+  previewImages: string[];
 }
 
-const CardLink: React.FC<CardLinkProps> = ({ title, description, endpoint, images }) => {
+const CardLink: React.FC<CardLinkProps> = ({ title, description, endpoint, previewImages }) => {
     return (
         <a href={`/album/${endpoint}`}>
-            <div className="max-w rounded-3xl p-px bg-gradient-to-b from-green-300 to-orange-300 dark:from-red-800 dark:to-yellow-800 hover:shadow-2xl hover:scale-90 hover:shadow-orange-200/20 duration-700">
+            <div className="max-w rounded-3xl p-px bg-gradient-to-b from-green-300 to-orange-300 dark:from-red-800 dark:to-yellow-800 hover:scale-105 hover:shadow-orange-400 duration-700">
                 <div className="rounded-[calc(1.5rem-1px)] p-10 bg-zinc-900 hover:bg-zinc-950 duration-75">
                     <h3 className="text-xl font-semibold mb-2">{title}</h3>
                     <p className="text-gray-300">{description}</p>
 
-                    <div className="flex items-center my-4 space-x-2">
-                      {images.map((name, index) => {
-                          if (index > 3) return;
-                          return (
-                            <Avatar
-                              key={index}
-                              endpoint={endpoint}
-                              name={name}
-                              index={index}
-                              type="image/jpg"
-                              size={60}
-                            />
-                          )
-                      })}
+                    <div className="flex items-center my-4 space-x-2 flex-wrap">
+                      {previewImages?.map((name, index) => (
+                          <Avatar
+                            key={index}
+                            endpoint={endpoint}
+                            name={name}
+                            index={index}
+                            type="image/jpg"
+                            size={window.screen.width > 500 ? 80 : 50}
+                          />
+                      ))}
                     </div>
 
                     <div className="flex items-center mt-5 text-orange-300">
@@ -66,13 +64,13 @@ interface AvatarProps {
 const Avatar: React.FC<AvatarProps> = ({ endpoint, name, size, index }) => {
   return (
     <div
-        className={`relative overflow-hidden rounded-full ${'right-[' + (10 * 2) * index + 'px]'}`}
+        className={`relative overflow-hidden rounded-full ${'right-[' + (10 * 2) * index + 'px] hover:scale-110 duration-100 hover:rotate-12'}`}
         style={{ width: size, height: size }}
     >
         <img
-          src={BASE_URL + "album/" + endpoint + `/${name}.jpg`}
+          src={BASE_URL + "album/" + endpoint + `/previewImage/${name}.jpg`}
           alt={name}
-          className="object-cover rounded-full w-full h-full"
+          className="object-cover rounded-full w-full h-full border-2 border-orange-400 border-dashed hover:scale-125 duration-300"
         />
     </div>
   );

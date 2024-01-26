@@ -21,26 +21,23 @@ function About() {
                     }}
                 />
                 <div
-                    className="flex flex-col items-center justify-center text-white"
+                    className="flex flex-col items-start justify-center text-white"
                 >
                     <motion.h1
-                        initial={{ opacity: 0, y: -50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ ease: 'easeInOut', duration: 0.3 }}
-                        className="text-4xl md:text-6xl font-bold mb-4 text-center"
-                        whileHover={{
-                            scale: 1.2
-                        }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ ease: 'easeInOut', duration: 2 }}
+                        className="text-4xl md:text-6xl font-bold mb-4 text-left px-5 md:px-32"
                     >
                         ¡Hola!
                     </motion.h1>
                     <motion.p
-                        initial={{ opacity: 0, y: 100, scale: 0.8 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ ease: 'easeInOut', duration: 1 }}
-                        className="text-lg text-orange-200 font-light text-center px-1 md:px-32 pt-8"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ ease: 'easeInOut', duration: 2 }}
+                        className="text-lg text-white font-light text-left px-5 md:px-32 text-pretty md:text-balance"
                     >
-                        Artista detrás de la lente 📸✨. Con pasión y visión única, transformo momentos en obras de arte. Desde bodas íntimas hasta vibrantes conciertos, capturo la belleza en cada detalle.
+                        <span className="text-orange-200 font-medium">Artista </span>detrás de la lente 📸✨. Con <span className="text-orange-200 font-medium">pasión y visión única</span>, transformo momentos en obras de <span className="text-orange-200 font-medium">arte</span>. Desde <span className="text-orange-200 font-medium">bodas íntimas hasta vibrantes conciertos</span>, capturo la belleza en cada detalle.
                     </motion.p>
                 </div>
             </div>

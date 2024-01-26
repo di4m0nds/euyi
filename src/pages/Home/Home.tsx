@@ -4,7 +4,7 @@ function Home() {
   return(
     <div className="w-screen">
         <Header activeNavbar={true} />
-        <main className="px-10 md:px-[15%]">
+        <main className="w-[90%] xl:w-[70%] m-auto">
             <About />
             <Projects />
             <Experience />
