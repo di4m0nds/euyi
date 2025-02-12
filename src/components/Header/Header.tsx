@@ -17,10 +17,10 @@ function Header({ activeNavbar } : Props) {
         >
             <Link to="/non-animation">
                 {/* <h1 className="text-[2.3rem] font-bold">EUGE FOTO{window.screen.width > 375 ? 'GRAFIA' : ''}</h1> */}
-                <h1 className="text-[2.8rem] md:text-[2.3rem] font-bold">
-                    EUGENIA SILVESTRI
+                <h1 className="relative top-0 text-[2.8rem] md:text-[2.3rem] font-bold">
+                    EUGENIA <span className="relative -top-5 sm:top-0">SILVESTRI</span>
                 </h1>
-                <span className="absolute top-32 md:top-10">FOTOGRAFIA</span>
+                <span className="absolute top-24 sm:top-12 md:top-10">FOTOGRAFIA</span>
             </Link>
             {activeNavbar
                 ? <Navbar />
