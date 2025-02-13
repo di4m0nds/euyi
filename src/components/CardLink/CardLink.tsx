@@ -12,33 +12,39 @@ interface CardLinkProps {
 const CardLink: React.FC<CardLinkProps> = ({ title, description, endpoint, previewImages }) => {
     return (
         <a href={`/album/${endpoint}`}>
-            <div className="max-w rounded-3xl p-px bg-gradient-to-b from-green-300 to-orange-300 dark:from-red-800 dark:to-yellow-800 hover:scale-105 hover:shadow-orange-400 duration-700">
-                <div className="rounded-[calc(1.5rem-1px)] p-10 bg-zinc-900 hover:bg-zinc-950 duration-75">
-                    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                    <p className="text-gray-300">{description}</p>
+            <div className="relative">
+                <div className="w-full md:h-[400px] z-20 p-10 bg-zinc-900/70 sm:bg-zinc-900/50 hover:bg-zinc-950/80 duration-75 group">
+                    <h3 className="text-4xl md:text-7xl font-bold mb-2 z-30 text-pretty">{title}</h3>
+                    <p className="text-gray-300 opacity-0 group-hover:opacity-100 z-30">{description}</p>
 
-                    <div className="flex items-center my-4 space-x-2 flex-wrap">
-                      {previewImages?.map((name, index) => (
-                          <Avatar
-                            key={index}
-                            endpoint={endpoint}
-                            name={name}
-                            index={index}
-                            type="image/jpg"
-                            size={window.screen.width > 500 ? 80 : 50}
-                          />
-                      ))}
+                    <div
+                      style={{ top: '0px', left: '0px', position: 'absolute', height: '100%', zIndex: '-5'}}
+                    >
+                      <div className="flex items-center justify-end h-full w-full z-0">
+                        {previewImages?.map((name, index) => (
+                            <motion.img
+                              key={index}
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              transition={{ duration: `${index}.99` }}
+                              src={BASE_URL + "album/" + endpoint + `/previewImage/${name}.jpg`}
+                              style={{ height: '100%' }}
+                              alt={name}
+                              className="w-[25%] object-cover h-[full] relative rounded -z-20"
+                            />
+                        ))}
+                      </div>
                     </div>
 
-                    <div className="flex items-center mt-5 text-orange-300">
-                        <span className="hover:text-orange-400">Ver más</span>
+                    <div className="flex items-center mb-5 text-orange-300  absolute bottom-0 ">
+                        <span className="hover:text-orange-400 z-10">Ver más</span>
                         <motion.svg
-                            className="w-4 h-4 ml-2"
+                            className="w-5 h-5 ml-2"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                             aria-hidden="true"
-                            whileHover={{ y: 5, scale: 1.2 }}
+                            whileHover={{ scale: 1.2 }}
                         >
                             <path
                                 fillRule="evenodd"
@@ -52,28 +58,5 @@ const CardLink: React.FC<CardLinkProps> = ({ title, description, endpoint, previ
         </a>
     )
 }
-
-interface AvatarProps {
-  endpoint: string;
-  name: string;
-  type: string;
-  size: number;
-  index: number;
-}
-
-const Avatar: React.FC<AvatarProps> = ({ endpoint, name, size, index }) => {
-  return (
-    <div
-        className={`relative overflow-hidden rounded-full ${'right-[' + (10 * 2) * index + 'px] hover:scale-110 duration-100 hover:rotate-12'}`}
-        style={{ width: size, height: size }}
-    >
-        <img
-          src={BASE_URL + "album/" + endpoint + `/previewImage/${name}.jpg`}
-          alt={name}
-          className="object-cover rounded-full w-full h-full border-2 border-orange-400 border-dashed hover:scale-125 duration-300"
-        />
-    </div>
-  );
-};
 
 export default CardLink;
