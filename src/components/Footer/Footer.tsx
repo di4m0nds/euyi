@@ -4,7 +4,7 @@ import { FiInstagram, FiMail, FiPhone } from 'react-icons/fi';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-gray-800 p-8 text-white">
+    <footer id="contact" className="bg-white/20 p-8 text-white">
       <div className="container mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
